@@ -1,0 +1,18 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+
+tr>td>a:link, a:visited{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight:bold;
+    font-size:1.2rem;
+
+
+}
