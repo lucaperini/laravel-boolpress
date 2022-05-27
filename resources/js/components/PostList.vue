@@ -1,6 +1,13 @@
 <template>
     <div>
-        <h1 class="text-center">Ultimi Post</h1>
+        <div class="col-12">
+            <router-link :to="{name: 'about'}">About Us</router-link>
+        </div>
+        <div class="col-12">
+            <router-view></router-view>
+            <h1 class="text-center">Ultimi Post</h1>
+        </div>
+
         <Post v-for="(post, index) in posts" :key="index" :post="post"/>
     </div>
 </template>
