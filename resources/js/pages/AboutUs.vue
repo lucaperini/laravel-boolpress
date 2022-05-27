@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid">
       <div class="row">
-          <div class="col-12">
+          <div class="col-12 text-center fw-bold">
               <h1>Vuoi Sapere chi siamo?</h1>
               <h2>Ci piacerebbe saperlo anche a noi!</h2>
           </div>
