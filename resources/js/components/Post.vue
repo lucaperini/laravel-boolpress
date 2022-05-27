@@ -1,10 +1,5 @@
 <template>
 <div class="container p-2">
-
-    <div class="col-12">
-        <router-view></router-view>
-    </div>
-
     <div class="d-flex">
         <div>
             <div class="card">

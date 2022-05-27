@@ -5,7 +5,7 @@ window.Vue = require("vue");
 
 import Vue from "vue";
 import VueRouter from "vue-router";
-import App from "./views/App";
+import App from "./views/App.vue";
 
 Vue.use(VueRouter);
 
