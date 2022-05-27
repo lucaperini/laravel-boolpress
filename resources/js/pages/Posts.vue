@@ -1,10 +1,7 @@
 <template>
-    <div>
-        <h1 class="text-center p-5">Ultimi Post</h1>
-        <div class="col-12">
-            <router-view></router-view>
+    <div class="row p-5 mb-3">
+        <h1 class="m-5">Ultimi Post</h1>
 
-        </div>
 
         <Post v-for="(post, index) in posts" :key="index" :post="post"/>
     </div>

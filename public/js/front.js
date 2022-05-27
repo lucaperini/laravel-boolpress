@@ -1959,7 +1959,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Main'
+  name: "Main"
 });
 
 /***/ }),
@@ -1996,10 +1996,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Post",
   components: {},
-  props: ['post']
+  props: ["post"]
 });
 
 /***/ }),
@@ -2062,9 +2063,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/Post */ "./resources/js/components/Post.vue");
-//
-//
-//
 //
 //
 //
@@ -2682,9 +2680,7 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _c("span", { staticClass: "navbar-text" }, [
-              _vm._v("\n        ***\n      "),
-            ]),
+            _vm._m(1),
           ]
         ),
       ]),
@@ -2712,6 +2708,16 @@ var staticRenderFns = [
       [_c("span", { staticClass: "navbar-toggler-icon" })]
     )
   },
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "navbar-text" }, [
+      _c("a", { staticClass: "nav-link active", attrs: { href: "/admin" } }, [
+        _vm._v("Login"),
+      ]),
+    ])
+  },
 ]
 render._withStripped = true
 
@@ -2734,7 +2740,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("router-view")
+  return _c("div", { staticClass: "col-12" }, [_c("router-view")], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -2758,44 +2764,31 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container p-2" }, [
-    _c("div", { staticClass: "d-flex" }, [
-      _c("div", [
-        _c("div", { staticClass: "card" }, [
-          _c("img", {
-            staticClass: "card-img-top",
-            staticStyle: { width: "18rem" },
-            attrs: {
-              src: _vm.post.image_url,
-              alt: "image of " + _vm.post.title,
-            },
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "card-title" }, [
-              _vm._v(
-                "\n                        " +
-                  _vm._s(_vm.post.title) +
-                  "\n                    "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "subtitle" }, [
-              _vm._v(
-                "\n                        " +
-                  _vm._s(_vm.post.author) +
-                  "\n                    "
-              ),
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-text" }, [
-              _vm._v(
-                "\n                        " +
-                  _vm._s(_vm.post.content) +
-                  "\n                    "
-              ),
-            ]),
-          ]),
+  return _c("div", { staticClass: "col-4" }, [
+    _c("div", { staticClass: "card m-3 p-3" }, [
+      _c("img", {
+        staticClass: "card-img-top p-0 mx-auto",
+        staticStyle: { width: "18rem" },
+        attrs: { src: _vm.post.image_url, alt: "image of " + _vm.post.title },
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "card-body" }, [
+        _c("div", { staticClass: "card-title" }, [
+          _vm._v(
+            "\n                " + _vm._s(_vm.post.title) + "\n            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "subtitle" }, [
+          _vm._v(
+            "\n                " + _vm._s(_vm.post.author) + "\n            "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "card-text" }, [
+          _vm._v(
+            "\n                " + _vm._s(_vm.post.content) + "\n            "
+          ),
         ]),
       ]),
     ]),
@@ -2901,10 +2894,9 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "row p-5 mb-3" },
     [
-      _c("h1", { staticClass: "text-center p-5" }, [_vm._v("Ultimi Post")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-12" }, [_c("router-view")], 1),
+      _c("h1", { staticClass: "m-5" }, [_vm._v("Ultimi Post")]),
       _vm._v(" "),
       _vm._l(_vm.posts, function (post, index) {
         return _c("Post", { key: index, attrs: { post: post } })

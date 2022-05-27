@@ -19,8 +19,8 @@
         </li>
       </ul>
       <span class="navbar-text">
-        ***
-      </span>
+            <a class="nav-link active" href="/admin">Login</a>
+    </span>
     </div>
   </div>
 </nav>
