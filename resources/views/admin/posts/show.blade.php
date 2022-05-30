@@ -9,7 +9,11 @@
                     </div>
                 @endif
                 <div class="card" style="width: 25rem;">
-                    <img src="{{ $post->image_url }}" class="card-img-top" alt="...">
+                    @if(str_starts_with($post->image_url, 'https://') || str_starts_with($post->image_url, 'http://'))
+                    <img src="{{ $post->image_url }}" class="card-img-top" alt="image of {{$post->title}}">
+                    @else
+                    @endif
+                    <img src="{{ asset('/storage').'/'. $post->image_url}}" class="card-img-top" alt="image of {{$post->title}}">
                     <div class="card-body">
                         <h5 class="card-title text-uppercase">{{ $post->title }}</h5>
                         <p class="card-subtitle text-muted">Author: {{ $post->user_id }}</p>

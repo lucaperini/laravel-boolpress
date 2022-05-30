@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Validator;
 use Symfony\Contracts\Service\Attribute\Required;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -52,7 +53,7 @@ class PostController extends Controller
         $newPost->title = $data['title'];
         $newPost->author = $data['author'];
         $newPost->content = $data['content'];
-        $newPost->image_url = $data['image_url'];
+        $newPost ->image_url = Storage::put('uploads', $data['image_url']);
         $newPost->posted = $data['posted'];
         $newPost->save();
         return redirect()->route('admin.posts.show', $newPost->id);

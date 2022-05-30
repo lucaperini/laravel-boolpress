@@ -13,7 +13,9 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{route('admin.posts.store', 'post' )}}" method="POST">
+                <form action="{{route('admin.posts.store', 'post' )}}" method="post" enctype="multipart/form-data">
+
+
                     @csrf
                     @method('POST')
                     <div class="mb-3">
@@ -34,7 +36,7 @@
                     </div>
                     <div class=" mb-3">
                         <label for="name" class="form-label">Inserisci url immagine:</label>
-                        <input type="text" name="image_url" class="form-control" id="name">
+                        <input type="file" name="image_url" class="form-control" id="image_url">
                     </div>
                     <div class=" mb-3">
                         <label for="name" class="form-label">Data pubblicazione:</label>
