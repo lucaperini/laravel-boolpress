@@ -28,6 +28,7 @@ Route::middleware("auth")
 
 Route::get('/contact', 'Guest\ContactController@contact')->name('guest.contact');
 Route::post('/contact', 'Guest\ContactController@contactMailSender')->name('guest.contact');
+Route::get('/thanks', 'Guest\ContactController@mailSent')->name('guest.thanks');
 
 
 Route::get('/{any?}', function(){
